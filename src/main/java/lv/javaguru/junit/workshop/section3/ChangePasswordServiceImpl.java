@@ -10,9 +10,9 @@ class ChangePasswordServiceImpl implements ChangePasswordService {
     private PasswordValidator passwordValidator;
 
     @Override
-    public void changePassword(User user, String password) {
-        passwordValidator.validate(user, password);
-        userRepository.saveNewPassword(user, password);
+    public void changePassword(User user, String newPassword) {
+        passwordValidator.validate(user, newPassword);
+        userRepository.saveNewPassword(user, newPassword);
     }
 
 }

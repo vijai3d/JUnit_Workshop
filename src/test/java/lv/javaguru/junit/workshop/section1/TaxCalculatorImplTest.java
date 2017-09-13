@@ -1,4 +1,4 @@
-package lv.javaguru.junit.workshop.section0.taxcalculator;
+package lv.javaguru.junit.workshop.section1;
 
 import org.junit.Before;
 import org.junit.Test;

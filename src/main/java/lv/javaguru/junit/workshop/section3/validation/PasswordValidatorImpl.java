@@ -12,9 +12,9 @@ class PasswordValidatorImpl implements PasswordValidator {
     }
 
     @Override
-    public void validate(User user, String password) {
+    public void validate(User user, String newPassword) {
         ruleFactory.createValidationRules()
-                .forEach(rule -> rule.validate(user, password));
+                .forEach(rule -> rule.validate(user, newPassword));
     }
 
 }

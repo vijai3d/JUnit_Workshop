@@ -1,4 +1,4 @@
-package lv.javaguru.junit.workshop.section0;
+package lv.javaguru.junit.workshop.section0.sorting;
 
 import java.util.Arrays;
 

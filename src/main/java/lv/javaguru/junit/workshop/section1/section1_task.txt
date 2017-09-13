@@ -3,14 +3,13 @@ for TaxCalculator using JUnit framework.
 
 TaxCalculator
 
-Simple rules (1-3):
+Simple rules (1-2):
 1) Income up to 20000 is taxed at 25%
 2) Income of more than 20000 is taxed at 40%
-3) Income of more than 50000 is taxed at 50%
 
-"Hard" rules (4-5):
-4) Implement possibility to calculate taxes for different years
-5) Send email to VID, when income is greater then 10000
+"Hard" rule:
+3) Implement possibility to calculate taxes for different years
+   with different % rates for each year (use mock for this)
 
 Write tests first!
 Tests should drive implementation!

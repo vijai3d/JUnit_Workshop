@@ -6,6 +6,6 @@ public interface UserRepository {
 
     List<String> getLastThreePasswords(User user);
 
-    void saveNewPassword(User user, String password);
+    void saveNewPassword(User user, String newPassword);
 
 }

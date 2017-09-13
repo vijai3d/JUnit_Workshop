@@ -1,4 +1,4 @@
-package lv.javaguru.junit.workshop.section0.taxcalculator;
+package lv.javaguru.junit.workshop.section1;
 
 public class TaxCalculatorImpl
         implements TaxCalculator {
