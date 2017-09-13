@@ -1,21 +1,23 @@
 package lv.javaguru.junit.workshop.section1;
 
-import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.runners.MockitoJUnitRunner;
 
 import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.times;
 
+@RunWith(MockitoJUnitRunner.class)
 public class TaxCalculatorImplTest {
 
-    private TaxProviderByYear taxProviderByYear;
-    private TaxCalculator taxCalculator;
+    @Mock private TaxProviderByYear taxProviderByYear;
 
-    @Before
-    public void init() {
-        taxProviderByYear = Mockito.mock(TaxProviderByYear.class);
-        taxCalculator = new TaxCalculatorImpl(taxProviderByYear);
-    }
+    @InjectMocks
+    private TaxCalculator taxCalculator = new TaxCalculatorImpl();
+
 
     @Test
     public void incomeZero() {
@@ -24,6 +26,9 @@ public class TaxCalculatorImplTest {
         double income = 0.0;
         double tax = taxCalculator.calculateTax(year, income);
         assertEquals(tax, 0.0, 0.0001);
+
+        Mockito.verify(taxProviderByYear).getTaxBorder(year);
+        Mockito.verify(taxProviderByYear, times(1)).getTaxBorder(year);
     }
 
     @Test

@@ -1,13 +1,9 @@
 package lv.javaguru.junit.workshop.section1;
 
-public class TaxCalculatorImpl
-        implements TaxCalculator {
+public class TaxCalculatorImpl implements TaxCalculator {
 
     private TaxProviderByYear taxProviderByYear;
 
-    public TaxCalculatorImpl(TaxProviderByYear taxProviderByYear) {
-        this.taxProviderByYear = taxProviderByYear;
-    }
 
     @Override
     public double calculateTax(int year,
