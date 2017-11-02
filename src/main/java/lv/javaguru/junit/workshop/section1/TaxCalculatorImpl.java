@@ -1,6 +1,6 @@
 package lv.javaguru.junit.workshop.section1;
 
-public class TaxCalculatorImpl implements TaxCalculator {
+public class TaxCalculatorImpl implements TaxCalculator, MailSender{
 
     private TaxProviderByYear taxProviderByYear;
 
@@ -15,8 +15,13 @@ public class TaxCalculatorImpl implements TaxCalculator {
         if (income <= taxBorder) {
             return income * taxBeforeBorder;
         }
+        sendMail(income);
         return taxBorder * taxBeforeBorder
                 + (income - taxBorder) * taxAfterBorder;
     }
 
+    @Override
+    public void sendMail(double income) {
+
+    }
 }
